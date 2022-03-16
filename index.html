@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+<style media="screen">
+
+button{
+border:none;
+
+}
+</style>
+
+  <title>Document</title>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+</head>
+<body id="switch">
+
+
+  <button type="button" name="button" id="dark" onclick="turnDark()" >
+
+<img src="https://i.ibb.co/Y7DVn47/On.png" alt="" height="200px;">
+
+  </button>
+  <button type="button" name="button" hidden id="light" onclick="turnLight()">
+<img src="https://i.ibb.co/h9hGCz2/Off.png" alt="" height="200px;">
+
+  </button>
+
+
+<script type="text/javascript">
+
+
+//
+// var song;
+//
+// function preload() {
+// song = loadSound("lightswitch.mp3");
+//
+// }
+//
+// function setup() {
+// createCanvas(200,200)
+//   song.play();
+//   song.setVolume(1);
+// }
+
+
+
+function turnDark(event){
+  document.getElementById("switch").style.cssText = "background-color:black;"
+  document.getElementById("light").style.cssText = "display:flex;"
+  document.getElementById("dark").style.cssText = "display:none;"
+  var audio = new Audio('lightswitch.mp3')
+  audio.play()
+
+}
+
+function turnLight(event){
+    document.getElementById("switch").style.cssText = "background-color:white;"
+      document.getElementById("light").style.cssText = "display:none;"
+        document.getElementById("dark").style.cssText = "display:flex;"
+        var audio = new Audio('lightswitch.mp3')
+        audio.play()
+
+}
+
+
+
+
+</script>
+
+
+</body>
+</html>
